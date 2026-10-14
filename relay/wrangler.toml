@@ -1,0 +1,9 @@
+# Cloudflare Worker 設定（用 wrangler 部署時才需要；用網頁後台貼上程式碼的話可以忽略）
+name = "nightjar-relay"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# 部署好網站後，改成你的網站網址，例如 "https://nightjar-gacha.pages.dev"
+# 多個網址用逗號分隔；"*" 代表任何網站都能用（不建議長期這樣設）
+ALLOWED_ORIGINS = "*"

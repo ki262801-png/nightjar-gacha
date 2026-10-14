@@ -1,0 +1,562 @@
+[
+ {
+  "id": "back-a01",
+  "file": "assets/deco/back-a01.webp",
+  "kind": "back",
+  "name": "紫霧月珠羽角",
+  "w": 408,
+  "h": 549
+ },
+ {
+  "id": "back-a01-l",
+  "file": "assets/deco/back-a01-l.webp",
+  "kind": "back-l",
+  "name": "紫霧月珠羽角（橫）",
+  "w": 549,
+  "h": 408
+ },
+ {
+  "id": "back-a02",
+  "file": "assets/deco/back-a02.webp",
+  "kind": "back",
+  "name": "銀藤星河",
+  "w": 403,
+  "h": 644
+ },
+ {
+  "id": "back-a02-l",
+  "file": "assets/deco/back-a02-l.webp",
+  "kind": "back-l",
+  "name": "銀藤星河（橫）",
+  "w": 644,
+  "h": 403
+ },
+ {
+  "id": "back-a03",
+  "file": "assets/deco/back-a03.webp",
+  "kind": "back",
+  "name": "虹彩單羽",
+  "w": 410,
+  "h": 634
+ },
+ {
+  "id": "back-a03-l",
+  "file": "assets/deco/back-a03-l.webp",
+  "kind": "back-l",
+  "name": "虹彩單羽（橫）",
+  "w": 634,
+  "h": 410
+ },
+ {
+  "id": "back-a04",
+  "file": "assets/deco/back-a04.webp",
+  "kind": "back",
+  "name": "四芒星聖徽",
+  "w": 384,
+  "h": 640
+ },
+ {
+  "id": "back-a04-l",
+  "file": "assets/deco/back-a04-l.webp",
+  "kind": "back-l",
+  "name": "四芒星聖徽（橫）",
+  "w": 640,
+  "h": 384
+ },
+ {
+  "id": "back-b01",
+  "file": "assets/deco/back-b01.webp",
+  "kind": "back",
+  "name": "星河漩渦",
+  "w": 589,
+  "h": 813
+ },
+ {
+  "id": "back-b01-l",
+  "file": "assets/deco/back-b01-l.webp",
+  "kind": "back-l",
+  "name": "星河漩渦（橫）",
+  "w": 813,
+  "h": 589
+ },
+ {
+  "id": "back-b02",
+  "file": "assets/deco/back-b02.webp",
+  "kind": "back",
+  "name": "銀羽雙翼",
+  "w": 589,
+  "h": 832
+ },
+ {
+  "id": "back-b02-l",
+  "file": "assets/deco/back-b02-l.webp",
+  "kind": "back-l",
+  "name": "銀羽雙翼（橫）",
+  "w": 832,
+  "h": 589
+ },
+ {
+  "id": "back-c01",
+  "file": "assets/deco/back-c01.webp",
+  "kind": "back",
+  "name": "流光銀河",
+  "w": 580,
+  "h": 900
+ },
+ {
+  "id": "back-c01-l",
+  "file": "assets/deco/back-c01-l.webp",
+  "kind": "back-l",
+  "name": "流光銀河（橫）",
+  "w": 900,
+  "h": 580
+ },
+ {
+  "id": "back-c02",
+  "file": "assets/deco/back-c02.webp",
+  "kind": "back",
+  "name": "雙羽銀藤",
+  "w": 556,
+  "h": 815
+ },
+ {
+  "id": "back-c02-l",
+  "file": "assets/deco/back-c02-l.webp",
+  "kind": "back-l",
+  "name": "雙羽銀藤（橫）",
+  "w": 815,
+  "h": 556
+ },
+ {
+  "id": "back-d01",
+  "file": "assets/deco/back-d01.webp",
+  "kind": "back",
+  "name": "金羽星河",
+  "w": 593,
+  "h": 900
+ },
+ {
+  "id": "back-d01-l",
+  "file": "assets/deco/back-d01-l.webp",
+  "kind": "back-l",
+  "name": "金羽星河（橫）",
+  "w": 900,
+  "h": 593
+ },
+ {
+  "id": "frame-d02",
+  "file": "assets/deco/frame-d02.webp",
+  "kind": "frame",
+  "name": "中空",
+  "w": 473,
+  "h": 900
+ },
+ {
+  "id": "back-e01",
+  "file": "assets/deco/back-e01.webp",
+  "kind": "back",
+  "name": "羽光星河",
+  "w": 461,
+  "h": 630
+ },
+ {
+  "id": "back-e01-l",
+  "file": "assets/deco/back-e01-l.webp",
+  "kind": "back-l",
+  "name": "羽光星河（橫）",
+  "w": 630,
+  "h": 461
+ },
+ {
+  "id": "back-e02",
+  "file": "assets/deco/back-e02.webp",
+  "kind": "back",
+  "name": "藤蔓星徽",
+  "w": 371,
+  "h": 571
+ },
+ {
+  "id": "back-e02-l",
+  "file": "assets/deco/back-e02-l.webp",
+  "kind": "back-l",
+  "name": "藤蔓星徽（橫）",
+  "w": 571,
+  "h": 371
+ },
+ {
+  "id": "back-f01",
+  "file": "assets/deco/back-f01.webp",
+  "kind": "back",
+  "name": "金藤晨曦",
+  "w": 354,
+  "h": 508
+ },
+ {
+  "id": "back-f01-l",
+  "file": "assets/deco/back-f01-l.webp",
+  "kind": "back-l",
+  "name": "金藤晨曦（橫）",
+  "w": 508,
+  "h": 354
+ },
+ {
+  "id": "back-f02",
+  "file": "assets/deco/back-f02.webp",
+  "kind": "back",
+  "name": "雙藤星魂",
+  "w": 401,
+  "h": 524
+ },
+ {
+  "id": "back-f02-l",
+  "file": "assets/deco/back-f02-l.webp",
+  "kind": "back-l",
+  "name": "雙藤星魂（橫）",
+  "w": 524,
+  "h": 401
+ },
+ {
+  "id": "back-g01",
+  "file": "assets/deco/back-g01.webp",
+  "kind": "back",
+  "name": "星環羅盤",
+  "w": 527,
+  "h": 710
+ },
+ {
+  "id": "back-g01-l",
+  "file": "assets/deco/back-g01-l.webp",
+  "kind": "back-l",
+  "name": "星環羅盤（橫）",
+  "w": 710,
+  "h": 527
+ },
+ {
+  "id": "icon-a12",
+  "file": "assets/deco/icon-a12.webp",
+  "kind": "icon",
+  "name": "花形紫星",
+  "w": 82,
+  "h": 87
+ },
+ {
+  "id": "icon-a13",
+  "file": "assets/deco/icon-a13.webp",
+  "kind": "icon",
+  "name": "方形紫星",
+  "w": 76,
+  "h": 87
+ },
+ {
+  "id": "icon-a14",
+  "file": "assets/deco/icon-a14.webp",
+  "kind": "icon",
+  "name": "菱形紫晶",
+  "w": 74,
+  "h": 88
+ },
+ {
+  "id": "icon-a15",
+  "file": "assets/deco/icon-a15.webp",
+  "kind": "icon",
+  "name": "細芒紫星",
+  "w": 75,
+  "h": 97
+ },
+ {
+  "id": "icon-a16",
+  "file": "assets/deco/icon-a16.webp",
+  "kind": "icon",
+  "name": "圓形紫星",
+  "w": 80,
+  "h": 88
+ },
+ {
+  "id": "badge-b03",
+  "file": "assets/deco/badge-b03.webp",
+  "kind": "badge",
+  "name": "大月環星空",
+  "w": 389,
+  "h": 393
+ },
+ {
+  "id": "badge-b04",
+  "file": "assets/deco/badge-b04.webp",
+  "kind": "badge",
+  "name": "小月環星空",
+  "w": 245,
+  "h": 279
+ },
+ {
+  "id": "badge-f07",
+  "file": "assets/deco/badge-f07.webp",
+  "kind": "badge",
+  "name": "粉金星盤",
+  "w": 249,
+  "h": 254
+ },
+ {
+  "id": "icon-g06",
+  "file": "assets/deco/icon-g06.webp",
+  "kind": "icon",
+  "name": "圓形金邊星",
+  "w": 191,
+  "h": 185
+ },
+ {
+  "id": "icon-g07",
+  "file": "assets/deco/icon-g07.webp",
+  "kind": "icon",
+  "name": "四葉藍晶",
+  "w": 177,
+  "h": 179
+ },
+ {
+  "id": "icon-g08",
+  "file": "assets/deco/icon-g08.webp",
+  "kind": "icon",
+  "name": "菱形金芒星",
+  "w": 165,
+  "h": 187
+ },
+ {
+  "id": "divider-a17",
+  "file": "assets/deco/divider-a17.webp",
+  "kind": "divider",
+  "name": "藍晶銀羽",
+  "w": 379,
+  "h": 87
+ },
+ {
+  "id": "divider-a18",
+  "file": "assets/deco/divider-a18.webp",
+  "kind": "divider",
+  "name": "紫星卷藤",
+  "w": 386,
+  "h": 96
+ },
+ {
+  "id": "badge-e12",
+  "file": "assets/deco/badge-e12.webp",
+  "kind": "badge",
+  "name": "雙星紫晶",
+  "w": 95,
+  "h": 246
+ },
+ {
+  "id": "feather-e13",
+  "file": "assets/deco/feather-e13.webp",
+  "kind": "feather",
+  "name": "靛紫飄羽",
+  "w": 194,
+  "h": 315
+ },
+ {
+  "id": "divider-f08",
+  "file": "assets/deco/divider-f08.webp",
+  "kind": "divider",
+  "name": "彎月星芒",
+  "w": 427,
+  "h": 171
+ },
+ {
+  "id": "feather-f09",
+  "file": "assets/deco/feather-f09.webp",
+  "kind": "feather",
+  "name": "金紫上揚",
+  "w": 433,
+  "h": 503
+ },
+ {
+  "id": "feather-f10",
+  "file": "assets/deco/feather-f10.webp",
+  "kind": "feather",
+  "name": "金紫橫飄",
+  "w": 454,
+  "h": 313
+ },
+ {
+  "id": "feather-a13",
+  "file": "assets/deco/feather-a13.webp",
+  "kind": "feather",
+  "name": "上揚",
+  "w": 1100,
+  "h": 469
+ },
+ {
+  "id": "feather-b20",
+  "file": "assets/deco/feather-b20.webp",
+  "kind": "feather",
+  "name": "橫向飄帶",
+  "w": 1100,
+  "h": 550
+ },
+ {
+  "id": "badge-c19",
+  "file": "assets/deco/badge-c19.webp",
+  "kind": "badge",
+  "name": "月桂星晶",
+  "w": 220,
+  "h": 366
+ },
+ {
+  "id": "backl-a04",
+  "file": "assets/deco/backl-a04.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-a04",
+  "name": "四芒星光（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-b01",
+  "file": "assets/deco/backl-b01.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-b01",
+  "name": "星河漩渦（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-c01",
+  "file": "assets/deco/backl-c01.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-c01",
+  "name": "流光銀河（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-e02",
+  "file": "assets/deco/backl-e02.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-e02",
+  "name": "藤蔓星徽（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-g01",
+  "file": "assets/deco/backl-g01.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-g01",
+  "name": "星環羅盤（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-a02",
+  "file": "assets/deco/backl-a02.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-a02",
+  "name": "銀藤星河（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-d01",
+  "file": "assets/deco/backl-d01.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-d01",
+  "name": "金羽星河（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backl-f02",
+  "file": "assets/deco/backl-f02.webp",
+  "kind": "back-l",
+  "shape": "l",
+  "pair": "back-f02",
+  "name": "雙藤星魂（橫）",
+  "w": 1000,
+  "h": 676
+ },
+ {
+  "id": "backs-b01",
+  "file": "assets/deco/backs-b01.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-b01",
+  "name": "星河漩渦（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-a04",
+  "file": "assets/deco/backs-a04.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-a04",
+  "name": "四芒星光（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-c01",
+  "file": "assets/deco/backs-c01.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-c01",
+  "name": "流光銀河（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-e02",
+  "file": "assets/deco/backs-e02.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-e02",
+  "name": "藤蔓星徽（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-g01",
+  "file": "assets/deco/backs-g01.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-g01",
+  "name": "星環羅盤（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-a02",
+  "file": "assets/deco/backs-a02.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-a02",
+  "name": "銀藤星河（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-d01",
+  "file": "assets/deco/backs-d01.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-d01",
+  "name": "金羽星河（方）",
+  "w": 999,
+  "h": 1000
+ },
+ {
+  "id": "backs-f02",
+  "file": "assets/deco/backs-f02.webp",
+  "kind": "back-s",
+  "shape": "s",
+  "pair": "back-f02",
+  "name": "雙藤星魂（方）",
+  "w": 999,
+  "h": 1000
+ }
+]

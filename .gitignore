@@ -1,0 +1,18 @@
+# 部署前產生的成品（python tools/build.py 會重新產生）
+dist/
+# Cloudflare wrangler 的暫存
+.wrangler/
+# See-through 自動拆層的暫存（裡面是處理過的圖片）
+st_jobs/
+# Python
+__pycache__/
+*.pyc
+# Danbooru 詞庫工具下載的暫存
+tools/danbooru_tags/wiki/
+tools/danbooru_tags/*.json
+# 系統檔
+.DS_Store
+Thumbs.db
+desktop.ini
+# 測試用的暫存圖
+web/_*

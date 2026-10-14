@@ -1,0 +1,280 @@
+<title>夜航卡舍 玩法指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+/* 版面：像一本收藏卡冊的說明書，左邊標題、右邊內容；手機改成一欄 */
+:root {
+  --bg: #f5f1e8; --paper: #fffcf5; --ink: #22202a; --muted: #6b6573; --line: #e2d9c6;
+  --gold: #a97b25; --gold-soft: #f1e3c2; --accent: #4b4fa8; --ssr: #c8902a; --sr: #8a5cc7; --r: #5a8fc7;
+  --f-display: "Noto Serif TC", "Songti TC", serif; --f-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; --f-latin: "Cormorant Garamond", Georgia, serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e0f1a; --paper: #161827; --ink: #ece8f3; --muted: #a29fb3; --line: #2b2d42;
+  --gold: #e2bd6e; --gold-soft: #2d2618; --accent: #9da2ff; --ssr: #f0c060; --sr: #c39cf2; --r: #8fbcef; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0e0f1a; --paper: #161827; --ink: #ece8f3; --muted: #a29fb3; --line: #2b2d42;
+  --gold: #e2bd6e; --gold-soft: #2d2618; --accent: #9da2ff; --ssr: #f0c060; --sr: #c39cf2; --r: #8fbcef; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.8; padding-inline: 20px; padding-block: 0 64px; }
+.wrap { max-width: 1040px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.35; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); }
+.latin { font-family: var(--f-latin); font-style: italic; letter-spacing: .08em; }
+
+/* 開頭 */
+.hero { padding-block: 56px 36px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; align-items: center; border-bottom: 1px solid var(--line); }
+.eyebrow { font-size: 12.5px; letter-spacing: .32em; color: var(--gold); text-transform: uppercase; }
+.hero h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 900; margin-top: 8px; letter-spacing: .04em; }
+.hero h1 small { display: block; font-family: var(--f-latin); font-style: italic; font-weight: 500; font-size: .42em; color: var(--muted); letter-spacing: .2em; margin-top: 4px; }
+.hero .lead { margin-top: 18px; font-size: 17.5px; color: var(--ink); max-width: 34em; }
+.hero .meta { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { font-size: 13px; padding: 4px 12px; border-radius: 99px; border: 1px solid var(--line); background: var(--paper); color: var(--muted); }
+.pill b { color: var(--ink); font-weight: 700; }
+
+/* 開頭右邊：三張示意卡 */
+.deck { position: relative; height: 270px; }
+.card { position: absolute; width: 150px; aspect-ratio: 2 / 3; border-radius: 14px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between;
+  background: linear-gradient(160deg, #1d1f36, #2c2552 55%, #4a3466); color: #f4ecd8; box-shadow: 0 14px 34px rgba(20, 16, 40, .28); border: 1px solid rgba(255, 220, 150, .35); }
+.card::after { content: ""; position: absolute; inset: 6px; border-radius: 10px; border: 1px solid rgba(255, 220, 150, .3); pointer-events: none; }
+.card .rar { font-family: var(--f-latin); font-size: 22px; font-weight: 500; }
+.card .nm { font-family: var(--f-display); font-size: 18px; font-weight: 700; text-align: center; }
+.card .en { font-family: var(--f-latin); font-style: italic; font-size: 11px; letter-spacing: .2em; text-align: center; opacity: .8; }
+.card.c1 { left: 6%; top: 34px; transform: rotate(-9deg); }
+.card.c2 { left: 30%; top: 8px; z-index: 2; background: linear-gradient(160deg, #3b2a12, #8a6420 50%, #e6c27a); box-shadow: 0 18px 40px rgba(120, 80, 10, .35); }
+.card.c3 { left: 55%; top: 40px; transform: rotate(8deg); background: linear-gradient(160deg, #18263b, #2f4f7a 55%, #6c8fbd); }
+.card.c2 .shine { position: absolute; inset: 0; border-radius: 14px; background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .45) 48%, transparent 60%); background-size: 250% 100%; animation: shine 4.5s ease-in-out infinite; }
+@keyframes shine { 0%, 30% { background-position: 120% 0; } 70%, 100% { background-position: -40% 0; } }
+@media (prefers-reduced-motion: reduce) { .card.c2 .shine { animation: none; } }
+
+/* 區塊 */
+section { padding-block: 44px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
+section > header h2 { font-size: 26px; font-weight: 900; }
+section > header .latin { display: block; color: var(--gold); font-size: 15px; margin-top: 4px; }
+section > header p { margin-top: 10px; color: var(--muted); font-size: 14px; }
+.body { min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+
+/* 開始玩：真的有順序 */
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: flex; flex-direction: column; gap: 14px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; }
+.steps li::before { content: counter(s); font-family: var(--f-latin); font-size: 30px; line-height: 1; color: var(--gold); text-align: center; padding-top: 4px; }
+.steps h3 { font-size: 17px; }
+.steps p { color: var(--muted); font-size: 15px; margin-top: 2px; }
+
+/* 功能卡 */
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.feat { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; min-width: 0; }
+.feat h3 { font-size: 17px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.feat h3 span { font-family: var(--f-body); font-size: 12px; font-weight: 500; color: var(--gold); letter-spacing: .1em; }
+.feat p, .feat li { font-size: 14.5px; color: var(--muted); }
+.feat p { margin-top: 6px; }
+.feat ul { margin: 8px 0 0; padding-left: 1.2em; }
+.feat li + li { margin-top: 2px; }
+.feat b { color: var(--ink); font-weight: 600; }
+
+/* 稀有度表 */
+.rates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.rate { border-radius: 12px; padding: 14px 16px; background: var(--paper); border: 1px solid var(--line); }
+.rate .tag { font-family: var(--f-latin); font-size: 26px; line-height: 1; }
+.rate .pct { font-variant-numeric: tabular-nums; font-size: 22px; font-weight: 700; margin-top: 6px; }
+.rate small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.rate.ssr .tag { color: var(--ssr); } .rate.sr .tag { color: var(--sr); } .rate.r .tag { color: var(--r); }
+.note { font-size: 14px; color: var(--muted); padding: 12px 16px; border-left: 3px solid var(--gold); background: var(--gold-soft); border-radius: 0 10px 10px 0; }
+.note b { color: var(--ink); }
+
+/* 提示詞示意 */
+.prompt { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.prompt .row { display: grid; grid-template-columns: 120px minmax(0, 1fr); border-top: 1px solid var(--line); }
+.prompt .row:first-child { border-top: 0; }
+.prompt .k { padding: 12px 14px; font-weight: 700; font-size: 14px; }
+.prompt .v { padding: 12px 14px; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13.5px; color: var(--muted); overflow-x: auto; white-space: nowrap; }
+.prompt .z1 .k { color: var(--sr); } .prompt .z2 .k { color: var(--gold); } .prompt .z3 .k { color: var(--r); } .prompt .zn .k { color: #c75a5a; }
+.prompt .out { background: var(--gold-soft); }
+.prompt .out .v { color: var(--ink); white-space: normal; }
+
+/* 常見問題 */
+details { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 0 18px; }
+details + details { margin-top: 8px; }
+summary { cursor: pointer; padding: 14px 0; font-weight: 700; font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "＋"; color: var(--gold); flex: none; }
+details[open] summary::after { content: "－"; }
+details p { padding-bottom: 14px; color: var(--muted); font-size: 14.5px; }
+summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+footer { padding-top: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding-block: 36px 28px; }
+  .deck { height: 240px; max-width: 360px; }
+  .card { width: 128px; }
+  section { grid-template-columns: 1fr; gap: 18px; padding-block: 34px; }
+  .grid { grid-template-columns: 1fr; }
+  .rates { grid-template-columns: 1fr; }
+  .prompt .row { grid-template-columns: 1fr; }
+  .prompt .k { padding-bottom: 0; }
+}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="eyebrow">NovelAI 抽卡收藏網站</div>
+      <h1>夜航卡舍<small>Nightjar · Arcana</small></h1>
+      <p class="lead">用你自己的 NovelAI 帳號，把 AI 繪圖變成抽卡。每一抽都是獨一無二的新圖，抽到的卡收進卡冊，再到工坊做成會動的 LIVE 卡、能轉動反光的 3D 閃卡。</p>
+      <div class="meta">
+        <span class="pill"><b>免費</b>使用，不需註冊</span>
+        <span class="pill">資料只存在<b>你的瀏覽器</b></span>
+        <span class="pill">電腦、手機都能玩</span>
+      </div>
+    </div>
+    <div class="deck" aria-hidden="true">
+      <div class="card c1"><span class="rar">R</span><div><div class="nm">雨夜</div><div class="en">RAINY NIGHT</div></div></div>
+      <div class="card c2"><span class="shine"></span><span class="rar">SSR</span><div><div class="nm">月下幻想</div><div class="en">MOONLIT</div></div></div>
+      <div class="card c3"><span class="rar">SR</span><div><div class="nm">星海</div><div class="en">STARSEA</div></div></div>
+    </div>
+  </header>
+
+  <section id="start">
+    <header><h2>五分鐘上手</h2><span class="latin">First voyage</span><p>沒有 NovelAI 帳號也能先用示範模式試玩完整流程。</p></header>
+    <div class="body">
+      <ol class="steps">
+        <li><div><h3>連上 NovelAI（可以先跳過）</h3><p>到 NovelAI 官網 → 帳號設定 → Get Persistent API Token，把 <code>pst-</code> 開頭的 Token 貼到「設定 → 連線」。沒有 Token 時會自動用示範模式，畫出抽象卡面讓你體驗流程，不花任何額度。</p></div></li>
+        <li><div><h3>挑一個卡池</h3><p>「召喚」頁左邊是卡池清單。內建角色池、場景池，還有道具、裝飾邊框、文字標題、光效等透明素材池。也可以按 ＋ 自己開新的卡池。</p></div></li>
+        <li><div><h3>按下召喚</h3><p>單抽或連抽（2～10 抽）。召喚時會有小魚躍入卡面、卡背由粒子聚合的演出，翻開就是剛畫好的新圖。</p></div></li>
+        <li><div><h3>幫卡片取名、收進卡冊</h3><p>每張卡可以取中文名和英文稱號，也可以交給系統隨機取。抽到的卡先放在卡冊下方的「待收納」，拖進卡冊頁面就收好了。</p></div></li>
+        <li><div><h3>到工坊加工</h3><p>把喜歡的卡做成會動的 LIVE 卡、3D 閃卡，加上燙金、特效、卡框，再匯出成影片、GIF 或可以轉動的網頁。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="gacha">
+    <header><h2>召喚</h2><span class="latin">The summoning</span><p>機率、保底和提示詞都可以自己調。</p></header>
+    <div class="body">
+      <div class="rates">
+        <div class="rate ssr"><div class="tag">SSR</div><div class="pct">3%</div><small>預設機率，最華麗的加成提示詞</small></div>
+        <div class="rate sr"><div class="tag">SR</div><div class="pct">15%</div><small>每 10 抽保證至少一張 SR 以上</small></div>
+        <div class="rate r"><div class="tag">R</div><div class="pct">82%</div><small>連續 60 抽沒出 SSR，下一抽必中</small></div>
+      </div>
+      <p class="note">稀有度不只是標籤：抽到 SSR 時，會在提示詞後面接上這個卡池的「SSR 加成提示詞」，讓高稀有度的圖真的比較華麗。機率、保底抽數、加成詞都能在卡池的「稀有度」分頁修改，也可以關掉卡面上的稀有度標誌。</p>
+
+      <div class="prompt" aria-label="提示詞組成示意">
+        <div class="row z1"><div class="k">① 畫師串</div><div class="v">artist:xxx, artist:yyy</div></div>
+        <div class="row z2"><div class="k">② 圖片提示詞</div><div class="v">1girl, solo, looking at viewer, upper body, cinematic lighting</div></div>
+        <div class="row zn"><div class="k">負面提示詞</div><div class="v">lowres, bad hands</div></div>
+        <div class="row z3"><div class="k">③ 隨機詞庫</div><div class="v">髮色抽 1 個 · 瞳色抽 1 個 · 頭飾抽 0～2 個 · 場景抽 1 個</div></div>
+        <div class="row out"><div class="k">實際送出</div><div class="v">artist:xxx, artist:yyy, 1girl, solo, looking at viewer, upper body, cinematic lighting, twintails, pink hair, red eyes, hair ribbon, cherry blossoms, shrine</div></div>
+      </div>
+
+      <div class="grid">
+        <div class="feat"><h3>Danbooru 詞庫 <span>4,889 個 TAG</span></h3><p>NovelAI 是用 Danbooru 的標籤訓練的。詞庫收了真的存在、常用的 TAG，每個都有中文名，分成人物、頭髮、臉部、服裝、配件、動作、鏡頭、場景、光影、畫風、物品、食物、動植物 13 大類。點一下加入，再點一下拿掉。</p></div>
+        <div class="feat"><h3>隨機詞庫 <span>每抽都不一樣</span></h3><p>每條規則是「一個詞庫，每次抽幾個」，例如髮色抽 1 個、頭飾抽 0～2 個。可以只勾自己喜歡的幾個 TAG 來抽，同一個詞不會重複。只有抽中的詞會送出，不會浪費提示詞長度。</p></div>
+        <div class="feat"><h3>打字自動提示 <span>中英都可以</span></h3><p>在提示詞框打 <b>twin</b> 會跳出雙馬尾、雙麻花辮；直接打 <b>貓</b> 也會跳出 cat、cat ears。上下鍵選，Enter 確定。</p></div>
+        <div class="feat"><h3>🎲 隨機提示詞</h3><p>像 NovelAI 的骰子，按一下就換成一組隨機的人物、服裝、姿勢、構圖和場景。按錯了可以復原。</p></div>
+        <div class="feat"><h3>智慧翻譯</h3><p>用中文描述想要的畫面，例如「銀色長髮的精靈少女，穿著白色洋裝」，轉成 <b>grey hair, long hair, elf, 1girl, white dress</b>。填了自己的 AI 金鑰後，還能翻成英文或日文的自然語句。</p></div>
+        <div class="feat"><h3>完整 NovelAI 參數</h3><ul><li>模型 V3～V5、尺寸、步數、引導、取樣器、種子</li><li>多角色分開描述，可以指定站位</li><li>圖生圖、Vibe 風格參考、角色參考</li><li>V5 透明背景，適合做道具和裝飾素材</li></ul></div>
+      </div>
+      <p class="note">提示詞旁有「預估長度」，NovelAI V4 以上的上限約 <b>512 tokens</b>，快超過時會變黃、變紅提醒你。</p>
+    </div>
+  </section>
+
+  <section id="album">
+    <header><h2>卡冊</h2><span class="latin">The binder</span><p>像真的卡冊一樣一頁一頁收藏。</p></header>
+    <div class="body">
+      <div class="grid">
+        <div class="feat"><h3>書架與卡冊</h3><p>可以開好幾本卡冊，依角色、卡池或心情分類。翻頁、放大單頁、雙指縮放都可以；手機上一次顯示一頁，卡片比較大。</p></div>
+        <div class="feat"><h3>待收納</h3><p>新抽到的卡先放在下方抽屜。拖進卡冊格子就收好，也可以依稀有度篩選、匯入自己的圖片。</p></div>
+        <div class="feat"><h3>卡片詳情</h3><ul><li>看生成時的提示詞、種子、模型</li><li>直接播放做好的 LIVE 動態</li><li>單張卡自己決定要不要顯示稀有度</li></ul></div>
+        <div class="feat"><h3>下載</h3><ul><li>含生成資訊的原圖，丟回 NovelAI 可以讀回參數</li><li>清除資訊的版本，分享時不會洩漏提示詞</li><li>閃卡圖、閃卡 GIF、LIVE 的 GIF 與影片</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workshop">
+    <header><h2>工坊</h2><span class="latin">The atelier</span><p>把一張圖做成會動、會反光的收藏卡。</p></header>
+    <div class="body">
+      <div class="grid">
+        <div class="feat"><h3>深度 3D <span>AI 景深</span></h3><p>在瀏覽器裡用 Depth Anything 分析遠近，滑鼠移動或手機傾斜時，人物和背景會前後錯開，有真的立體感。</p></div>
+        <div class="feat"><h3>LIVE 拆件 <span>動態皮膚</span></h3><p>把頭髮、胸口、眼睛、飾品塗成部件，設定飄動、呼吸、擺動、眨眼、漂浮、看向游標，讓角色像 Live2D 一樣動起來。</p></div>
+        <div class="feat"><h3>圖層 <span>像 PSD</span></h3><p>上傳的圖、素材卡、裝飾、卡背都能當圖層，分成最上層、外圍、主體、背景四組，可以移動、縮放、旋轉、裁切，最後合成成新卡片。</p></div>
+        <div class="feat"><h3>特效 <span>41 種一鍵風格</span></h3><ul><li><b>46 種粒子</b>：花瓣、楓葉、雪花、螢火蟲、天燈、水母、蝙蝠、數位雨……最多三種疊加</li><li><b>動態濾鏡</b>：極光、窗上雨滴、水底光紋、霓虹描邊、故障</li><li><b>調色</b>：18 種色調，像青橙電影、日系清新、底片感</li><li><b>風格化</b>：漫畫網點、美漫描邊、油畫、水彩、鉛筆素描、熱成像</li></ul></div>
+        <div class="feat"><h3>閃卡工藝 <span>3D 全息卡</span></h3><p>珍珠、銀箔、燙金、極光、玫瑰金等鐳射材質，滑鼠移上去卡片會轉動、流光。可以加卡框、卡名、稱號、編號與風味文字。</p></div>
+        <div class="feat"><h3>手感工藝 <span>燙金・打凸・壓紋</span></h3><p>燙金、燙銀、玫瑰金、古銅、黑燙、幻彩燙、打凸、壓紋、UV 亮油，可以加在任何圖層、卡框文字，或直接從原圖取範圍。例如把圖裡的金色飾品變成真的燙金，再配上亞麻、皮革、水彩紙紋。</p></div>
+      </div>
+      <p class="note">做好的作品可以匯出成 <b>WebM 影片、高清 GIF、PNG</b>，閃卡還能匯出成<b>一個可以轉動的網頁檔</b>，傳給朋友用瀏覽器打開就能玩。也可以放到首頁輪播展示。</p>
+    </div>
+  </section>
+
+  <section id="more">
+    <header><h2>其他功能</h2><span class="latin">Odds &amp; ends</span></header>
+    <div class="body">
+      <div class="grid">
+        <div class="feat"><h3>解析圖片</h3><p>把 NovelAI 或 Stable Diffusion 的 PNG 拖進來，讀出正面、負面提示詞、多角色與參數，一鍵套用到卡池。全部在你的瀏覽器裡讀取，不會上傳。</p></div>
+        <div class="feat"><h3>首頁</h3><p>把喜歡的卡、LIVE 作品、閃卡放進首頁輪播，搭配 8 種名牌樣式、日夜兩種配色。</p></div>
+        <div class="feat"><h3>個人化</h3><ul><li>多款卡背（直式、橫式、方形）與色調</li><li>召喚引導：小魚、星星、愛心、可愛、簡潔或關閉</li><li>自訂游標、開場動畫、繁體 / 简体切換</li></ul></div>
+        <div class="feat"><h3>手機版</h3><p>手機打開會自動切換成手機版面：底部分頁列、單頁卡冊、適合手指操作的按鈕。也可以在設定裡手動切換。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <header><h2>常見問題</h2><span class="latin">Questions</span></header>
+    <div class="body">
+      <details><summary>要花錢嗎？</summary><p>網站本身免費。生圖用的是你自己的 NovelAI 帳號：Opus 方案在 1024×1024 以內（含 832×1216）、步數 28 以下時不扣 Anlas，其他情況依 NovelAI 的規則計算。連抽前會先提醒你會送出幾次請求。</p></details>
+      <details><summary>我的 Token 和卡片會被收集嗎？</summary><p>不會。Token 只存在你自己的瀏覽器；線上版生成時會經過中繼原封不動轉給 NovelAI，中繼不保存、不記錄任何東西。卡片、圖片、卡冊都只存在你的瀏覽器。</p></details>
+      <details><summary>換電腦或清除瀏覽器資料，卡片會不見嗎？</summary><p>會，因為資料只存在這個瀏覽器。到「設定 → 資料」匯出備份檔，換電腦後再匯入就能完整搬過去。備份檔不會包含你的 Token 和金鑰。</p></details>
+      <details><summary>召喚失敗會扣保底嗎？</summary><p>不會。任何一抽失敗會立刻停下、不自動重試，失敗那一抽也不計入抽數與保底。</p></details>
+      <details><summary>提示詞裡的 &lt;紅髮|藍髮&gt; 是什麼？</summary><p>舊式的隨機寫法：召喚前就在你的瀏覽器裡挑好其中一個，NovelAI 只會收到挑中的詞。現在建議改用「③ 隨機詞庫」，可以一鍵轉換，比較好管理。</p></details>
+      <details><summary>沒有 NovelAI 帳號可以玩嗎？</summary><p>可以用示範模式體驗召喚、卡冊、工坊的所有流程，卡面會是程式畫的抽象圖。工坊也可以上傳你自己的圖片來加工。</p></details>
+    </div>
+  </section>
+
+  <footer>夜航卡舍 · Nightjar Arcana　｜　非商業的個人作品，生成的圖片請遵守 NovelAI 使用條款</footer>
+</div>
+
+<!-- hans-toggle -->
+<style>
+:root[lang="zh-Hans"] { --f-display: "Noto Serif SC", "Noto Serif TC", "Songti SC", serif; --f-body: "Noto Sans SC", "Noto Sans TC", "PingFang SC", "Microsoft YaHei", sans-serif; }
+.lang-toggle { position: fixed; top: calc(14px + env(safe-area-inset-top, 0px)); right: 16px; z-index: 10; display: flex; padding: 3px; border-radius: 99px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 4px 16px rgba(20, 16, 40, .12); }
+.lang-toggle button { border: 0; background: none; color: var(--muted); font-family: var(--f-body); font-size: 14px; font-weight: 700; width: 36px; height: 30px; border-radius: 99px; cursor: pointer; }
+.lang-toggle button[aria-pressed="true"] { background: var(--gold); color: var(--paper); }
+.lang-toggle button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+<div class="lang-toggle" role="group" aria-label="繁體 / 简体"><button id="lang-hant" data-l="hant" aria-pressed="true">繁</button><button id="lang-hans" data-l="hans" aria-pressed="false">简</button></div>
+<script>
+(() => {
+  const MAP = {"丟":"丢","亞":"亚","來":"来","個":"个","備":"备","傳":"传","傾":"倾","內":"内","兩":"两","冊":"册","則":"则","剛":"刚","動":"动","勢":"势","匯":"汇","區":"区","參":"参","問":"问","喚":"唤","單":"单","嗎":"吗","圍":"围","圖":"图","場":"场","塊":"块","塗":"涂","壓":"压","實":"实","寫":"写","導":"导","屜":"屉","層":"层","師":"师","帳":"帐","幫":"帮","幾":"几","庫":"库","張":"张","後":"后","從":"从","復":"复","愛":"爱","態":"态","換":"换","擺":"摆","敗":"败","數":"数","時":"时","書":"书","會":"会","東":"东","條":"条","楓":"枫","業":"业","極":"极","構":"构","標":"标","樣":"样","機":"机","橫":"横","檔":"档","欄":"栏","歡":"欢","決":"决","沒":"没","況":"况","洩":"泄","潔":"洁","濾":"滤","瀏":"浏","為":"为","無":"无","熱":"热","燈":"灯","燙":"烫","獨":"独","現":"现","畫":"画","當":"当","疊":"叠","確":"确","種":"种","稱":"称","筆":"笔","範":"范","篩":"筛","簡":"简","籤":"签","約":"约","紅":"红","紋":"纹","納":"纳","紙":"纸","組":"组","給":"给","統":"统","經":"经","網":"网","線":"线","編":"编","練":"练","縮":"缩","繪":"绘","繼":"继","續":"续","腦":"脑","膚":"肤","臉":"脸","與":"与","舊":"旧","華":"华","葉":"叶","著":"着","藍":"蓝","藝":"艺","號":"号","螢":"萤","蟲":"虫","裝":"装","裡":"里","複":"复","見":"见","規":"规","覽":"览","訂":"订","計":"计","訊":"讯","訓":"训","記":"记","設":"设","註":"注","詞":"词","試":"试","詳":"详","誌":"志","語":"语","說":"说","調":"调","請":"请","證":"证","譯":"译","議":"议","讀":"读","變":"变","讓":"让","貓":"猫","負":"负","費":"费","貼":"贴","資":"资","質":"质","躍":"跃","較":"较","載":"载","輪":"轮","轉":"转","辮":"辫","這":"这","連":"连","進":"进","過":"过","遠":"远","適":"适","選":"选","還":"还","邊":"边","鈕":"钮","鉛":"铅","銀":"银","銅":"铜","錄":"录","錢":"钱","錯":"错","鍵":"键","鏡":"镜","鐘":"钟","鐳":"镭","鑰":"钥","長":"长","閃":"闪","閉":"闭","開":"开","關":"关","際":"际","隨":"随","雙":"双","電":"电","靈":"灵","頁":"页","順":"顺","預":"预","頭":"头","題":"题","額":"额","類":"类","顯":"显","風":"风","飄":"飘","飾":"饰","馬":"马","驗":"验","體":"体","髮":"发","魚":"鱼","麗":"丽","麼":"么","黃":"黄","點":"点"};
+  const PH = [["資訊","信息"],["游標","光标"],["內建","内置"],["線上","在线"],["金鑰","密钥"],["匯入","导入"],["匯出","导出"],["打開","打开"],["取樣","采样"],["數位","数字"],["資料","数据"],["文字","文字"],["智慧","智能"],["鐳射","镭射"],["程式","程序"],["預設","默认"],["影片","视频"],["設定","设置"],["連線","连接"],["滑鼠","鼠标"],["機率","概率"],["上傳","上传"],["下載","下载"],["帳號","账号"]];
+  const re = PH.length ? new RegExp(PH.map(([k]) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g') : null;
+  const phm = new Map(PH);
+  const toHans = s => { if (re) s = s.replace(re, m => phm.get(m) || m); let o = ''; for (const c of s) o += MAP[c] || c; return o; };
+  const orig = new Map(), origTitle = document.title;
+  const nodes = () => { const out = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); for (let n = w.nextNode(); n; n = w.nextNode()) if (!n.parentElement.closest('script, style, .lang-toggle')) out.push(n); return out; };
+  const ATTR = ['aria-label', 'title'];
+  const set = lang => {
+    const hans = lang === 'hans';
+    for (const n of nodes()) {
+      if (!orig.has(n)) orig.set(n, n.nodeValue);
+      n.nodeValue = hans ? toHans(orig.get(n)) : orig.get(n);
+    }
+    document.querySelectorAll(ATTR.map(a => '[' + a + ']').join(',')).forEach(el => {
+      if (el.closest('.lang-toggle')) return;
+      for (const a of ATTR) { const v = el.getAttribute(a); if (v == null) continue; const k = 'data-orig-' + a; if (!el.hasAttribute(k)) el.setAttribute(k, v); el.setAttribute(a, hans ? toHans(el.getAttribute(k)) : el.getAttribute(k)); }
+    });
+    document.title = hans ? toHans(origTitle) : origTitle;
+    document.documentElement.lang = hans ? 'zh-Hans' : 'zh-Hant';
+    document.querySelectorAll('.lang-toggle button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.l === lang)));
+    try { localStorage.setItem('nj-guide-lang', lang); } catch (e) {}
+  };
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.addEventListener('click', () => set(b.dataset.l)));
+  let start = location.hash === '#hans' ? 'hans' : location.hash === '#hant' ? 'hant' : null;
+  if (!start) { try { start = localStorage.getItem('nj-guide-lang'); } catch (e) {} }
+  if (!start && /^zh-(cn|sg|hans)/i.test(navigator.language || '')) start = 'hans';
+  document.documentElement.lang = 'zh-Hant';
+  if (start === 'hans') set('hans');
+})();
+</script>
+<!-- /hans-toggle -->

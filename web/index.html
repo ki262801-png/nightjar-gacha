@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="night" data-tone="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0e13">
+  <title>夜航卡舍 · 抽卡模擬器</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23c49a50'/%3E%3Cpath d='M36 68V34l28 34V34' fill='none' stroke='%236e5221' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@1,500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // 先套用上次的主題，避免載入時閃一下
+    try { if (localStorage.getItem('nightjar-lang') === 'hans') { document.documentElement.lang = 'zh-Hans'; document.documentElement.dataset.lang = 'hans'; } } catch { }
+    // 版面（手機版 / 電腦版）：載入前先決定，避免先排成另一種再跳
+    try {
+      const L = localStorage.getItem('nightjar-layout') || 'auto', small = Math.min(screen.width, screen.height) <= 760 && matchMedia('(pointer: coarse)').matches;
+      if (L === 'desktop' && small) document.querySelector('meta[name="viewport"]').content = 'width=1280';
+      document.documentElement.dataset.layout = L === 'mobile' || (L === 'auto' && (small || innerWidth <= 760)) ? 'mobile' : 'desktop';
+      if (L === 'mobile' && !small && innerWidth > 760) document.documentElement.classList.add('phone-frame');
+    } catch { }
+    try { const t = localStorage.getItem('nightjar-theme'); if (t) { document.documentElement.dataset.theme = t; document.documentElement.dataset.tone = t === 'night' ? 'dark' : 'light'; } } catch { }
+  </script>
+</head>
+<body>
+  <aside class="rail"></aside>
+  <main id="view"></main>
+  <div id="overlay-root"></div>
+  <div id="fx-root"></div>
+  <div id="toast-root"></div>
+  <script src="config.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

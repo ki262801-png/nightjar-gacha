@@ -1,0 +1,7 @@
+# 統一用 LF；Windows 批次檔維持 CRLF 才能正常執行
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.png binary
+*.webp binary
+*.jpg binary
+*.ico binary

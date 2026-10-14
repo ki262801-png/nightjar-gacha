@@ -1,0 +1,5 @@
+studded_collar=鉚釘項圈
+floral_background=花卉背景
+fading_border=淡出邊框
+hand_on_another's_face=手摸別人的臉
+hands_on_another's_chest=-
