@@ -3,7 +3,7 @@
 用自己的 NovelAI 帳號玩 AI 抽卡。每一抽都是 AI 當場畫的新圖，抽到的卡收進卡冊，再到工坊做成會動的 LIVE 卡、能轉動反光的 3D 閃卡。
 
 - 線上版：https://nightjar-gacha.pages.dev
-- 玩法介紹：https://nightjar-gacha.pages.dev/guide.html（[简体](https://nightjar-gacha.pages.dev/guide.html#hans)）
+- 玩法介紹：[繁體](https://nightjar-gacha.pages.dev/guide.html) ／ [简体](https://nightjar-gacha.pages.dev/guide.html#hans)
 
 免費、不用註冊，電腦和手機都能玩。沒有 NovelAI 帳號也可以用示範模式試玩完整流程。
 
